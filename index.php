@@ -61,7 +61,7 @@ $f3->route('GET /delete/@page', '\Page\Controller->delete');
 
 // misc
 $f3->route('GET /install', '\Common->installJIG');
-//$f3->set('ONERROR','\Common->error');
+$f3->set('ONERROR','\Common->error');
 
 
 // kick start
