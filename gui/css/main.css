@@ -1,0 +1,506 @@
+/* font config */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext);
+
+body, p, input, button, select, textarea, .navbar-search .search-query {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/* bootstrap override */
+
+body {
+	padding-top: 80px;
+	color: #4d5357;
+}
+
+td.center {
+	text-align: center;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+.navbar-inner {
+	min-height: 81px;
+	border: 2px solid #49a3dd; /* stroke */
+	background-color: #3293d7; /* layer fill content */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxNzdjNyIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iNjglIiBzdG9wLWNvbG9yPSIjNDU5ZmRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGRhN2RmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgPC9saW5lYXJHcmFkaWVudD4KCjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ1cmwoI2hhdDApIiAvPgo8L3N2Zz4=); /* gradient overlay */
+	background-image: -moz-linear-gradient(bottom, #2177c7 0%, #459fdd 68.04%, #4da7df 100%); /* gradient overlay */
+	background-image: -o-linear-gradient(bottom, #2177c7 0%, #459fdd 68.04%, #4da7df 100%); /* gradient overlay */
+	background-image: -webkit-linear-gradient(bottom, #2177c7 0%, #459fdd 68.04%, #4da7df 100%); /* gradient overlay */
+	background-image: linear-gradient(bottom, #2177c7 0%, #459fdd 68.04%, #4da7df 100%); /* gradient overlay */
+}
+	.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+		border-width: 0 0 2px;
+	}
+
+.navbar .nav > li {
+	line-height: 61px;
+}
+
+	.navbar .nav > li > a {
+		padding: 20px 15px 0px;
+		font-size: 1.3em;
+		color: #FFF;
+		font-weight: bold;
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	.navbar .nav > .active > a,
+	.navbar .nav > .active > a:hover,
+	.navbar .nav > .active > a:focus {
+		font-family: Ubuntu, sans-serif;
+		color: #FFF;
+		background: url(../img/nav_active.png) repeat-x bottom left;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.navbar .nav > li > a:focus,
+	.navbar .nav > li > a:hover {
+		color: #FFF;
+	}
+
+/* app styles */
+.masthead {
+	background: url(../img/masthead_bg.png) center top repeat-x;
+	width: 100%;
+	height: 323px;
+	overflow: hidden;
+	color: #FFF;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+}
+.masthead:after {
+	background: url("../img/hr.png") no-repeat scroll center top transparent;
+	content: '';
+	height: 34px;
+	width: 100%;
+	position: absolute;
+	margin-top: 2px;
+}
+	.masthead .container {
+		background: url(../img/header.png) center top no-repeat;
+		height: 323px;
+	}
+
+	.masthead h1 {
+		font-size: 4em;
+	}
+
+	.masthead h2 {
+		font-size: 1.4em;
+		line-height: 1.5em;
+	}
+
+.headTxt {
+	left: 165px;
+	margin: 0 auto;
+	position: relative;
+	top: 45px;
+	width: 600px;
+}
+
+	.headTxt ul {
+		list-style: none;
+		margin-left: 40px;
+		margin-top: 25px;
+	}
+
+	.headTxt ul li {
+		color: #d2e1f1;
+		font-size: 1.4em;
+		line-height: 1.6em;
+	}
+
+	.teaser {
+		padding-left: 70px;
+		min-height: 320px;
+		margin-bottom: 30px;
+	}
+		#main .teaser h3 {
+			margin-top: 5px;
+			color: #2F6185;
+			font-size: 1.8em;
+			line-height: 1.4em;
+			font-weight: bold;
+			margin-bottom: 10px;
+			border: none;
+		}
+
+		.teaser img {
+			float: left;
+			margin-left: -70px;
+		}
+		
+	#main h2 {
+		color: #2F6185;
+		font-size: 1.8em;
+		line-height: 1.4em;
+		font-weight: bold;
+		margin-top: 40px;
+		margin-bottom: 15px;
+	}
+	
+	#main h3 {
+		border-bottom: 2px dotted #CCCCCC;
+		color: #4D5357;
+		font-size: 1.4em;
+		font-weight: bold;
+		line-height: 1.2em;
+		margin-top: 30px;
+		padding-bottom: 3px;
+	}
+	
+	#main h4 {
+		color: #2F6185;
+		font-size: 1.3em;
+		font-weight: normal;
+		line-height: 1.2em;
+		margin-bottom: 6px;
+		margin-top: 20px;
+	}	
+	#main h5,
+	#main h6 {
+		font-size: 1.1em;
+		line-height: 1.2em;
+		margin-bottom: 6px;
+		margin-top: 16px;
+	}
+	#main h6 {
+		font-weight: normal;
+	}	
+
+	.ml10 { margin-left: 10px; }
+	.mr10 { margin-right: 10px; }
+	.mt10 { margin-top: 10px; }
+	.mb10 { margin-bottom: 10px; }
+
+	hr {
+		height: 34px;
+		background: url(../img/hr.png) center top no-repeat;
+		border: none;
+	}
+
+	#main {
+		min-height: 450px;
+	}
+
+	#main p {
+		font-size: 1.125em;
+		line-height: 1.4em;
+	}
+
+	.home .padded ul {
+		margin-top: 30px;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 40px;
+		-webkit-column-gap: 40px;
+		column-gap: 40px;
+		max-width: 800px;
+	}
+
+	.home li {
+		font-size: 1.2em;
+		line-height: 1.6em;
+		color: #2e6085;
+		font-weight: bold;
+	}
+
+	.home .padded {
+		padding: 0 70px;
+	}
+
+footer {
+	background: #252528 url(../img/footer_bg2.png);
+	height: 246px;
+	width: 100%;
+	color: #BBB;
+}
+
+	footer h3 {
+		font-size: 1.3em;
+	}
+
+/* fix scroll position on anchor links, when top nav bar is fixed */
+h1[id]:before,
+h2[id]:before,
+h3[id]:before,
+h4[id]:before,
+h5[id]:before,
+h6[id]:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
+/* wait for Javascript to show things it powers */
+#search-query, button.more {
+	display: none;
+}
+
+/* code prettify */
+
+div.highlight {
+	margin-bottom: 3ex;
+}
+
+/* filesystem hierarchy prettify */
+ul.tree, ul.tree ul {
+	list-style-type: none;
+	background: #f5f5f5 url(../img/vline.png) repeat-y 0.5ex 0;
+	margin: 0;
+	padding: 0 0 0 0.5ex;
+}
+
+ul.tree {
+	background-position: 1em 0;
+	padding-left: 1em;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+ul.tree li {
+	margin: 0 4px 0 0;
+	padding: 0 12px;
+	line-height: 20px;
+	background: url(../img/node.png) no-repeat;
+}
+
+	ul.tree li:last-child,
+	ul.tree li.last {
+		background: #f5f5f5 url(../img/lastnode.png) no-repeat;
+		padding-bottom: 0.5ex;
+	}
+
+/* twitter */
+.tweets {
+    margin-top: 40px;
+    background-color: #2E6085;    
+    padding: 20px 0 10px;
+    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
+	min-height: 50px;
+}
+	.twitter-wrapper {
+	    position: relative;
+		padding: 10px 0 10px 0;
+	}
+	#tweetnav {
+	    float: left;
+	    height: auto;
+	    position: absolute;
+	    width: 11px;
+	}
+		#tweetnav .flex-prev {
+		    background: url("../img/tw_arrow.png") no-repeat 0 0;
+		    display: block;
+		    height: 6px;
+		    left: 0;
+		    margin-bottom: 7px;
+		    width: 11px;
+		}
+		#tweetnav .flex-next {
+		    background: url("../img/tw_arrow.png") no-repeat 0 -6px;
+		    display: block;
+		    height: 6px;
+		    left: 0;
+		    width: 11px;
+		}
+		#tweetnav .flex-direction-nav a {
+		    position: inherit;
+		}
+		
+	#follow_img {
+	    position: absolute;
+	    right: 0;
+	    top: 16%;
+	}
+	#prev_t,
+	#next_t {
+	    display: block;
+	    color: #fff;
+	}
+	.tweets-slide {
+	    display: block;
+	    color: #fff;    
+	    overflow: hidden;
+	    padding-left: 20px;
+	    padding-right: 180px;
+	}
+		.tweets-slide li {
+		    min-height: auto
+		}
+
+#toc.affix-bottom {
+	bottom: 270px;
+	position: absolute;
+	top: auto;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	.teaser {
+		min-height: 280px;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.navbar-fixed-top {
+		margin-bottom: 0px !important;
+	}
+
+	.masthead .container {
+		width: 100%;
+	}
+
+	.headTxt {
+		font-size: 0.8em;
+		width: 500px;
+		left: 115px;
+	}
+
+		.headTxt ul {
+			list-style: none;
+			margin-left: 40px;
+			margin-top: 40px;
+		}
+		
+			.headTxt ul li {
+				color: #d2e1f1;
+				font-size: 1.5em;
+				line-height: 1.8em;
+			}
+
+
+	.teaser {
+		padding-left: 0;
+		min-height: 340px;
+		margin-bottom: 30px;
+	}
+
+		.teaser img {
+			float: left;
+			margin-left: 0;
+			margin-right: 10px;
+		}
+		
+		#main .teaser h3 {
+			font-size: 1.6em;
+			line-height: 1.2em;
+		}
+
+	.home .padded { padding: 0; }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.navbar-fixed-top {
+		margin-bottom: 0px !important;
+	}
+
+	.masthead,
+	footer,
+	.tweets {
+		margin-left: -20px;
+		margin-right: -20px;
+		width: auto;
+	}
+
+		.masthead .container {
+			background: url(../img/header_phone.png) center top no-repeat;
+		}
+
+		footer .container {
+			padding: 0 20px;
+		}
+
+    .headTxt {
+	    position: static;
+	    width: 80%;
+	    font-size: 0.8em;
+	    margin-top: 40px;
+	    padding-left: 10%;
+    }
+
+		.headTxt ul {
+			list-style: disc;
+			margin-left: 40px;
+			margin-top: 25px;
+		}
+	
+			.headTxt ul li {
+				color: #d2e1f1;
+				font-size: 1.4em;
+				line-height: 1.6em;
+			}
+
+	.navbar .nav > li > a {
+		font-size: 1.1em;
+	}
+
+	.teaser {
+		padding-left: 0;
+		min-height: 0;
+		margin-bottom: 20px;
+	}
+
+		.teaser img {
+			float: left;
+			margin-left: 0;
+			margin-right: 10px;
+		}
+
+	.home .padded {
+		padding: 0;
+	}
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	.headTxt {
+		position: static;
+		width: 90%;
+		font-size: 0.7em;
+		margin-top: 40px;
+		padding-left: 0;
+	}
+
+		.headTxt ul {
+			list-style: disc;
+			margin-left: 20px;
+			margin-top: 25px;
+		}
+
+	.navbar .nav > li {
+		line-height: 40px;
+	}
+		.navbar .nav > li > a {
+			font-size: 0.9em;
+			padding: 0 5px 0;
+		}
+
+	.home .padded {
+		padding: 0;
+	}
+
+}

@@ -1,0 +1,7 @@
+<ul class="nav">
+    <repeat group="{{@menu}}" value="{{@page}}">
+    <li{{(@page.slug == @current_page_path)?' class="active"':''}}>
+    <a href="{{@page.slug}}">{{@page.title}}</a>
+    </li>
+    </repeat>
+</ul>
