@@ -1,3 +1,0 @@
-# System Requirements
-
-lorem ipsun
