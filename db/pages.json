@@ -9,7 +9,8 @@
         "title": "API Reference",
         "slug": "api-reference",
         "lang": "en",
-        "template": "toc-sidemenu.html"
+        "template": "left-main.html",
+        "_id": "512e893d0a427"
     },
     "512e893d0a922": {
         "title": "User Guide",
@@ -42,5 +43,19 @@
         "slug": "system-requirements",
         "lang": "en",
         "_id": "514bc021eca80"
+    },
+    "514c93a2c0ed1": {
+        "title": "Base",
+        "template": "toc-sidemenu.html",
+        "slug": "base",
+        "lang": "en",
+        "_id": "514c93a2c0ed1"
+    },
+    "514d870aefb1b": {
+        "title": "Example",
+        "template": "toc-sidemenu.html",
+        "slug": "example",
+        "lang": "en",
+        "_id": "514d870aefb1b"
     }
 }
