@@ -40,7 +40,7 @@ $f3->set('DB',new DB\Jig('db/'));
 // app vars
 
 $f3->set('REPO', 'https://github.com/ikkez/F3com');
-$f3->set('DOMAIN', 'vircuit.net');
+$f3->set('DOMAIN', 'fatfreeframework.com');
  
 // ROUTING
 
