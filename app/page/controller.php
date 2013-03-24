@@ -16,7 +16,7 @@ class Controller
         $include,       // template include
         $content;       // page contents
 
-	public function __construct() {
+    public function __construct() {
         $this->data = array (
             'title' => '',
             'template' => ''
@@ -77,9 +77,9 @@ class Controller
                         $path = $f3->get('MDCONTENT').$page.'/'.$mk.'.md';
                         $marker[$mk] = (file_exists($path)) ? $f3->read($path) : '';
                     }
-                    $f3->mset(array('layout' => $marker));
+                    $f3->set('layout', $marker);
                 } else {
-                    $f3->error('500', 'Layout not found');
+                    $f3->error('500', sprintf('Layout `%s` not found',$model->template));
                 }
 
             }
@@ -116,18 +116,16 @@ class Controller
 
         $web = \Web::instance();
         $model = new Model();
-        $new = true;
+        $slug_title = $web->slug($f3->get('POST.title'));
+
         if (empty($params['page'])) {
-            $slug = $web->slug($f3->get('POST.title'));
-            $model->load(array('@slug = ?', $slug));
+            $model->load(array('@slug = ?', $slug_title));
             if (!$model->dry())
                 $f3->error(500, 'Another page with same title already exists.');
         } else {
-            $slug = $web->slug($params['page']);
-            $model->load(array('@slug = ?', $slug));
+            $model->load(array('@slug = ?', $web->slug($params['page'])));
             if (!$model->dry()) {
-                $new = false;
-                if ($model->slug != $web->slug($f3->get('POST.title'))) {
+                if ($model->slug != $slug_title) {
                     if (!$this->rename())
                         return false;
                 }
@@ -156,7 +154,7 @@ class Controller
         // save page config
         $model->title = $f3->get('POST.title');
         $model->template = $f3->get('POST.template');
-        $model->slug = $slug;
+        $model->slug = $slug_title;
         $model->lang = 'en'; // TODO: support multilanguage
         $model->save();
 
@@ -205,7 +203,8 @@ class Controller
      */
     public function rename()
     {
-        if(!$this->checkEnviroment($f3,$params))
+        $f3 = \Base::instance();
+        if(!$this->checkEnviroment($f3,$f3->get('PARAMS')))
            return;
 
         // TODO: check if page could be renamed
