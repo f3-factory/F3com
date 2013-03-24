@@ -38,10 +38,10 @@ $f3->set('MDCONTENT', 'content/');
 $f3->set('DB',new DB\Jig('db/'));
 
 // app vars
-
-$f3->set('REPO', 'https://github.com/ikkez/F3com');
+$f3->set('REPO', 'https://github.com/F3Community/F3com-data');
 $f3->set('DOMAIN', 'fatfreeframework.com');
- 
+
+
 // ROUTING
 
 // default page
