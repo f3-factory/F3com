@@ -24,26 +24,26 @@ class Controller
         $this->include = '';
         $this->displayEdit = false;
     }
-    
+
     /*
      * check if we run this from our own dev machine
      * this wiki is not intended to be edited on the live server     
      */
-    protected function checkEnviroment($f3,$params)
+    protected function checkEnviroment($f3, $params)
     {
-    	if(strtolower($f3->get('HOST')) == $f3->get('DOMAIN')) {
-    	
-    		if( array_key_exists('marker',$params) && !empty($params['marker'])) {
-    		    $edit_link = $f3->get('REPO').'/edit/master/'.
-    		    			 $f3->get('MDCONTENT').$params['page'].'/'.$params['marker'].'.md';
-    		} else {
-    		    $edit_link = $f3->get('REPO').'/'.$f3->get('MDCONTENT').$params['page'];        	
-    		}
-    		$f3->set('edit_link',$edit_link);
-    	    $this->include = $f3->get('TMPL').'fork.html';
-    	    return false;
-    	}
-    	return true;    
+        if (is_int(strpos(strtolower($f3->get('HOST')), $f3->get('DOMAIN')))) {
+
+            if (array_key_exists('marker', $params) && !empty($params['marker'])) {
+                $edit_link = $f3->get('REPO').'/edit/master/'.$f3->get('MDCONTENT').
+                             $params['page'].'/'.$params['marker'].'.md';
+            } else {
+                $edit_link = $f3->get('REPO').'/'.$f3->get('MDCONTENT').$params['page'];
+            }
+            $f3->set('edit_link', $edit_link);
+            $this->include = $f3->get('TMPL').'fork.html';
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -59,7 +59,7 @@ class Controller
         }
         
         if(!$this->checkEnviroment($f3,$params))
-        	return;
+            return;
         
         $layout = new \Layout\Model();
         $model = new Model();
@@ -111,9 +111,9 @@ class Controller
      */
     public function save($f3, $params)
     {    
-		if(!$this->checkEnviroment($f3,$params))
-			return;
-			
+        if(!$this->checkEnviroment($f3,$params))
+            return;
+
         $web = \Web::instance();
         $model = new Model();
         $new = true;
@@ -204,10 +204,10 @@ class Controller
      * rename a page
      */
     public function rename()
-    {    	
-    	if(!$this->checkEnviroment($f3,$params))
-    		return;
-    		
+    {
+        if(!$this->checkEnviroment($f3,$params))
+           return;
+
         // TODO: check if page could be renamed
         // check if new name has already been taken
         // scan all other pages for links, that should be repaired and do it
@@ -222,10 +222,10 @@ class Controller
      * delete a page
      */
     public function delete($f3,$params)
-    {    	
-    	if(!$this->checkEnviroment($f3,$params))
-    		return;
-    		
+    {
+        if(!$this->checkEnviroment($f3,$params))
+           return;
+
         $model = new Model();
         $model->loadExistingPage($params['page']);
         if(!$model->dry()) {
