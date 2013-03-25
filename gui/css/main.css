@@ -343,7 +343,7 @@ ul.tree li {
 	    padding-right: 180px;
 	}
 		.tweets-slide li {
-		    min-height: auto
+		    min-height: auto;
 		}
 
 #toc.affix-bottom {
@@ -471,6 +471,13 @@ ul.tree li {
 	.home .padded {
 		padding: 0;
 	}
+
+    #toc {
+	    position: static !important;
+    }
+        #toc ul ul {
+	        display: none !important;
+        }
 
 }
 
