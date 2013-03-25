@@ -29,7 +29,7 @@ class ViewHelper
     static function renderMarkdown($args)
     {
         $tmp = \Template::instance();
-        $md_string = (isset($args[0])) ? '"'.addslashes($args[0]).'"' : '';
+        $md_string = (isset($args[0])) ? '"'.addslashes($tmp->token($args[0])).'"' : '';
         if (array_key_exists('@attrib', $args)) {
             $attr = $args['@attrib'];
             foreach ($attr as &$att) {
