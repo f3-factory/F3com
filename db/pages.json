@@ -19,10 +19,10 @@
         "template": "left-main.html"
     },
     "512e893d0adbd": {
-        "title": "Contribute",
-        "slug": "contribute",
+        "title": "Developement",
+        "slug": "developement",
         "lang": "en",
-        "template": "left-main.html",
+        "template": "toc-sidemenu.html",
         "_id": "512e893d0adbd"
     },
     "512feae5673be": {
