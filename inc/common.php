@@ -38,13 +38,6 @@ class Common
         } else {
             $f3->set('trace', '');
         }
-
-        if ($f3->get('ERROR.code') == 404) {
-            $f3->set('text', '<a class="btn" href="edit/'.$f3->get('PARAMS.page').'">'.
-                '<i class="icon-pencil"></i> Create this page now.</a>');
-        } else {
-            $f3->set('text', '');
-        }
         $content = \Template::instance()->render($f3->get('TMPL').'404.html');
         $f3->set('content', $content);
         $f3->set('page.title', 'Error '.$f3->get('ERROR.code'));
