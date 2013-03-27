@@ -19,8 +19,8 @@
         "template": "left-main.html"
     },
     "512e893d0adbd": {
-        "title": "Developement",
-        "slug": "developement",
+        "title": "Development",
+        "slug": "development",
         "lang": "en",
         "template": "toc-sidemenu.html",
         "_id": "512e893d0adbd"
