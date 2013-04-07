@@ -352,6 +352,36 @@ ul.tree li {
 	top: auto;
 }
 
+.social-btn {
+	display: inline-block;
+	width: 33px;
+	height: 30px;
+	background: url(../img/btn_sprite.png) no-repeat;
+	margin-right: 10px;
+}
+
+	.social-btn.twitter { background-position: 0 0; }
+	.social-btn.twitter:hover { background-position: 0 -30px; }
+	.social-btn.github { background-position: -33px 0; }
+	.social-btn.github:hover { background-position: -33px -30px; }
+	.social-btn.google { background-position: -66px 0; }
+	.social-btn.google:hover { background-position: -66px -30px; }
+	.social-btn.stackoverflow { background-position: -99px 0; }
+	.social-btn.stackoverflow:hover { background-position: -99px -30px; }
+	.social-btn.mail { background-position: -132px 0; }
+	.social-btn.mail:hover { background-position: -132px -30px; }
+	.social-btn.irc { background-position: -165px 0; }
+	.social-btn.irc:hover { background-position: -165px -30px; }
+
+.donate {
+	display: inline-block;
+	width: 203px;
+	height: 45px;
+	background: url(../img/btn_sprite.png) no-repeat -198px 0;
+}
+
+.donate:hover { background-position: -198px -45px; }
+
 /* Large desktop */
 @media (min-width: 1200px) {
 	.teaser {
