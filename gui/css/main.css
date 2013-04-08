@@ -141,6 +141,9 @@ td.center {
 			margin-left: -70px;
 		}
 		
+	#main h1 {
+        font-size: 34px;
+    }
 	#main h2 {
 		color: #2F6185;
 		font-size: 1.8em;
