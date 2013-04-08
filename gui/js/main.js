@@ -129,4 +129,6 @@ $(document).ready(function() {
 	    $(window).on('scroll', $.tocAffix);
     }
 
+    $('.social-btn').tooltip();
+
 });
