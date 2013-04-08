@@ -162,12 +162,14 @@ td.center {
 	
 	#main h4 {
 		color: #2F6185;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		font-weight: normal;
 		line-height: 1.2em;
 		margin-bottom: 6px;
-		margin-top: 20px;
-	}	
+		margin-top: 16px;
+	}
+	#main h4:first-child { margin-top: 0 }
+
 	#main h5,
 	#main h6 {
 		font-size: 1.1em;
@@ -223,13 +225,18 @@ td.center {
 
 footer {
 	background: #252528 url(../img/footer_bg2.png);
-	height: 246px;
+	min-height: 200px;
 	width: 100%;
 	color: #BBB;
 }
 
+footer .row {
+	min-height: 150px;
+}
+
 	footer h3 {
 		font-size: 1.3em;
+		line-height: 1.2em;
 	}
 
 /* fix scroll position on anchor links, when top nav bar is fixed */
