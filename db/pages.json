@@ -78,5 +78,40 @@
         "slug": "databases",
         "lang": "en",
         "_id": "5163de5d7fbe0"
+    },
+    "5163df063e58b": {
+        "title": "Plug-ins",
+        "template": "toc-sidemenu.html",
+        "slug": "plug-ins",
+        "lang": "en",
+        "_id": "5163df063e58b"
+    },
+    "5163df6211220": {
+        "title": "Optimization",
+        "template": "toc-sidemenu.html",
+        "slug": "optimization",
+        "lang": "en",
+        "_id": "5163df6211220"
+    },
+    "5163dff16ce5d": {
+        "title": "Unit Testing",
+        "template": "toc-sidemenu.html",
+        "slug": "unit-testing",
+        "lang": "en",
+        "_id": "5163dff16ce5d"
+    },
+    "5163e02a22ede": {
+        "title": "Quick Reference",
+        "template": "toc-sidemenu.html",
+        "slug": "quick-reference",
+        "lang": "en",
+        "_id": "5163e02a22ede"
+    },
+    "5163e06f41048": {
+        "title": "Support and Licensing",
+        "template": "toc-sidemenu.html",
+        "slug": "support-and-licensing",
+        "lang": "en",
+        "_id": "5163e06f41048"
     }
 }
