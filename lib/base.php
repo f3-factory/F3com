@@ -19,7 +19,7 @@ final class Base {
 	//@{ Framework details
 	const
 		PACKAGE='Fat-Free Framework',
-		VERSION='3.0.6-Release';
+		VERSION='3.0.7-Dev';
 	//@}
 
 	//@{ HTTP status codes (RFC 2616)
@@ -88,7 +88,8 @@ final class Base {
 		E_Fatal='Fatal error: %s',
 		E_Open='Unable to open %s',
 		E_Routes='No routes specified',
-		E_Method='Invalid method %s';
+		E_Method='Invalid method %s',
+		E_Hive='Invalid hive key %s';
 	//@}
 
 	private
@@ -137,6 +138,8 @@ final class Base {
 			@session_start();
 			$this->sync('SESSION');
 		}
+		elseif (!preg_match('/^\w+$/',$parts[0]))
+			trigger_error(sprintf(self::E_Hive,$this->stringify($key)));
 		if ($add)
 			$var=&$this->hive;
 		else
@@ -613,6 +616,7 @@ final class Base {
 			'(?:,(?P<mod>(?:\s*\w+(?:\s+\{.+?\}\s*,?)?)*))?)?\}/',
 			function($expr) use($args,$conv) {
 				extract($expr);
+				extract($conv);
 				if (!array_key_exists($pos,$args))
 					return $expr[0];
 				if (isset($type))
@@ -632,24 +636,50 @@ final class Base {
 							if (isset($mod))
 								switch ($mod) {
 									case 'integer':
-										return
-											number_format(
-												$args[$pos],0,'',
-												$conv['thousands_sep']);
+										return number_format(
+											$args[$pos],0,'',$thousands_sep);
 									case 'currency':
-										return
-											$conv['currency_symbol'].
-											number_format(
-												$args[$pos],
-												$conv['frac_digits'],
-												$conv['decimal_point'],
-												$conv['thousands_sep']);
+										if (function_exists('money_format'))
+											return money_format(
+												'%n',$args[$pos]);
+										$num=number_format(
+											abs($args[$pos]),$frac_digits,
+											$decimal_point,$thousands_sep);
+										if ($args[$pos]<0) {
+											$sgn=$negative_sign;
+											$loc=$n_sign_posn;
+											$sep=$n_sep_by_space?' ':'';
+											$pre=$n_cs_precedes;
+										}
+										else {
+											$sgn=$positive_sign;
+											$loc=$p_sign_posn;
+											$sep=$p_sep_by_space?' ':'';
+											$pre=$p_cs_precedes;
+										}
+										if ($pre) {
+											if ($loc==3)
+												$currency_symbol=$sgn.
+													$currency_symbol;
+											elseif ($loc==4)
+												$currency_symbol.=$sgn;
+											$num=$currency_symbol.$sep.$num;
+										}
+										else
+											$num.=$sep.$currency_symbol;
+										switch ($loc) {
+											case 0:
+												return '('.$num.')';
+											case 1:
+												return $sgn.$num;
+											case 2:
+												return $num.$sgn;
+										}
+										return $num;
 									case 'percent':
-										return
-											number_format(
-												$args[$pos]*100,0,
-												$conv['decimal_point'],
-												$conv['thousands_sep']).'%';
+										return number_format(
+											$args[$pos]*100,0,$decimal_point,
+											$thousands_sep).'%';
 								}
 							break;
 						case 'date':
@@ -927,13 +957,18 @@ final class Base {
 	/**
 	*	Bind handler to route pattern
 	*	@return NULL
-	*	@param $pattern string
+	*	@param $pattern string|array
 	*	@param $handler callback
 	*	@param $ttl int
 	*	@param $kbps int
 	**/
 	function route($pattern,$handler,$ttl=0,$kbps=0) {
 		$types=array('sync','ajax');
+		if (is_array($pattern)) {
+			foreach ($pattern as $item)
+				$this->route($item,$handler,$ttl,$kbps);
+			return;
+		}
 		preg_match('/([\|\w]+)\h+([^\h]+)'.
 			'(?:\h+\[('.implode('|',$types).')\])?/',$pattern,$parts);
 		if (empty($parts[2]))
@@ -968,12 +1003,18 @@ final class Base {
 
 	/**
 	*	Provide ReST interface by mapping HTTP verb to class method
+	*	@return NULL
 	*	@param $url string
 	*	@param $class string
 	*	@param $ttl int
 	*	@param $kbps int
 	**/
 	function map($url,$class,$ttl=0,$kbps=0) {
+		if (is_array($url)) {
+			foreach ($url as $item)
+				$this->map($item,$class,$ttl,$kbps);
+			return;
+		}
 		$fluid=preg_match('/@\w+/',$url);
 		foreach (explode('|',self::VERBS) as $method)
 			if ($fluid ||
