@@ -139,7 +139,7 @@ class Controller
             // write markdown files
             if (!is_writable($path = $f3->get('MDCONTENT')))
                 trigger_error('data folder is not writable: '.$f3->get('MDCONTENT'));
-            @mkdir($f3->get('MDCONTENT').$slug.'/');
+            @mkdir($f3->get('MDCONTENT').$slug_title.'/');
             $marker = array();
             foreach ($layout->marker as $mk) {
                 $path = $f3->get('MDCONTENT').$params['page'].'/'.$mk.'.md';
