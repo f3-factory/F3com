@@ -204,6 +204,11 @@ td.center {
 		background: url(../img/hr.png) center top no-repeat;
 		border: none;
 	}
+    blockquote hr {
+        height: 1px;
+        background: none;
+        border: 1px solid #eeeeee;
+    }
 
 	.home .padded {
 		padding: 0 70px;
@@ -280,6 +285,7 @@ ul.tree, ul.tree ul {
 ul.tree {
 	background-position: 1em 0;
 	padding-left: 1em;
+    padding-top: 6px;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	-webkit-border-radius: 4px;
@@ -299,6 +305,11 @@ ul.tree {
 			background: #f5f5f5 url(../img/lastnode.png) no-repeat;
 			padding-bottom: 0.5ex;
 		}
+
+        ul.tree li .label {
+            margin-left: 12px;
+        }
+
 
 /* twitter ticker */
 .tweets {
