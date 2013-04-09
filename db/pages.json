@@ -57,5 +57,26 @@
         "slug": "example",
         "lang": "en",
         "_id": "514d870aefb1b"
+    },
+    "5163dc14129f4": {
+        "title": "Framework Variables",
+        "template": "toc-sidemenu.html",
+        "slug": "framework-variables",
+        "lang": "en",
+        "_id": "5163dc14129f4"
+    },
+    "5163ddc3cadcd": {
+        "title": "Views and Templates",
+        "template": "toc-sidemenu.html",
+        "slug": "views-and-templates",
+        "lang": "en",
+        "_id": "5163ddc3cadcd"
+    },
+    "5163de5d7fbe0": {
+        "title": "Databases",
+        "template": "toc-sidemenu.html",
+        "slug": "databases",
+        "lang": "en",
+        "_id": "5163de5d7fbe0"
     }
 }
