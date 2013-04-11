@@ -32,7 +32,6 @@ class View {
         $pageModel = new \Page\Model();
         $pageModel->load(array('@slug = ?', $current_page));
         if (!$pageModel->dry() && !empty($pageModel->pid)) {
-            $pageModel->reset();
             // load parent page
             $pageModel->load(array('@_id = ? ', $pageModel->pid));
             if (!$pageModel->dry()) {
