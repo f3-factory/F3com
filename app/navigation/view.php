@@ -45,6 +45,7 @@ class View {
                 return self::resolveParentPage($parent_page,$pages);
             }
         }
+        return $pages;
     }
 
     static public function renderTag($args)
