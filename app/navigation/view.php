@@ -42,7 +42,7 @@ class View {
                         $page['active'] = true;
                         return $pages;
                     }
-                return self::resolveParentPage($parent_page,$pages);
+                return self::resolveParentActivePage($parent_page['slug'],$pages);
             }
         }
         return $pages;
