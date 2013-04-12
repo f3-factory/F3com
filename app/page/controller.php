@@ -53,9 +53,9 @@ class Controller
      */
     public function edit($f3, $params)
     {
-        $page = '';
+        $page_slug = '';
         if(array_key_exists('page',$params) && !empty($params['page'])) {
-            $page = $params['page'];
+            $page_slug = $params['page'];
         }
         
         if(!$this->checkEnviroment($f3,$params))
@@ -64,8 +64,8 @@ class Controller
         $layout = new \Layout\Model();
         $model = new Model();
 
-        if(!empty($page)) {
-            $model->loadExistingPage($page);
+        if(!empty($page_slug)) {
+            $model->loadExistingPage($page_slug);
             if(!$model->dry()) {
                 $this->data = $model->cast();
 
@@ -74,7 +74,7 @@ class Controller
                     // set markdown file paths
                     $marker = array();
                     foreach ($layout->marker as $mk) {
-                        $path = $f3->get('MDCONTENT').$page.'/'.$mk.'.md';
+                        $path = $f3->get('MDCONTENT').$page_slug.'/'.$mk.'.md';
                         $marker[$mk] = (file_exists($path)) ? $f3->read($path) : '';
                     }
                     $f3->set('layout', $marker);
@@ -88,7 +88,7 @@ class Controller
         $this->data['title'] = 'Edit Page'.(($title)?': '.$title:'');
 
         $f3->set('FORM_title', $title);
-        $f3->set('ACTION','edit/'.$page);
+        $f3->set('ACTION','edit/'.$page_slug);
         if(!$model->dry()) {
             $f3->set('backend_layout',$f3->get('TMPL').'backend/'.$model->template);
             $f3->set('REQUEST.template', $model->template);
@@ -100,7 +100,32 @@ class Controller
             $templates[$item->file] = $item->name;
         $f3->set('templates', $templates);
 
+        // load page tree
+        $pages = $model->find();
+        $pageTree = array();
+        $pagesByID = array();
+        foreach($pages as $index => $page)
+            $pagesByID[$page->_id] = $page->cast();
+        // reorder to tree
+        foreach ($pagesByID as &$value)
+            if ($parent = $value['pid'])
+                $pagesByID[$parent]['childs'][] = &$value;
+            else
+                $pageTree[] = &$value;
+        $f3->set('parentPagesTree', $this->renderParentPages($pageTree));
+        $f3->set('REQUEST.pid', $model->pid);
         $this->include = $f3->get('TMPL').'edit.html';
+    }
+
+    private function renderParentPages($pageTree, $lvl = '')
+    {
+        $return = array();
+        foreach ($pageTree as $page) {
+            $return[$page['_id']] = $lvl.' '.$page['title'];
+            if (array_key_exists('childs', $page) && !empty($page['childs']))
+                $return = $return + $this->renderParentPages($page['childs'], $lvl.'&nbsp;&nbsp;.&nbsp;&nbsp;');
+        }
+        return $return;
     }
 
     /**
@@ -154,6 +179,7 @@ class Controller
         // save page config
         $model->title = $f3->get('POST.title');
         $model->template = $f3->get('POST.template');
+        $model->pid = $f3->get('POST.pid');
         $model->slug = $slug_title;
         $model->lang = 'en'; // TODO: support multilanguage
         $model->save();

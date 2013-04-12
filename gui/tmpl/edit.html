@@ -15,8 +15,17 @@
                     <!-- template -->
                     <div class="control-group">
                         <label class="control-label" for="inputTemplate">Template</label>
+
                         <div class="controls">
                             <select id="inputTemplate" name="template" group="{{@templates}}"></select>
+                        </div>
+                    </div>
+                    <!-- parent -->
+                    <div class="control-group">
+                        <label class="control-label" for="pid">Parent Page</label>
+
+                        <div class="controls">
+                            <select id="inputPID" name="pid" group="{{@parentPagesTree}}"></select>
                         </div>
                     </div>
                     <include if="{{isset(@backend_layout)}}" href="{{@backend_layout}}"></include>
