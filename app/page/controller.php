@@ -112,7 +112,7 @@ class Controller
                 $pagesByID[$parent]['childs'][] = &$value;
             else
                 $pageTree[] = &$value;
-        $f3->set('parentPagesTree', $this->renderParentPages($pageTree));
+        $f3->set('parentPagesTree', array('' => '/') + $this->renderParentPages($pageTree));
         $f3->set('REQUEST.pid', $model->pid);
         $this->include = $f3->get('TMPL').'edit.html';
     }
