@@ -110,12 +110,5 @@
         "slug": "quick-reference",
         "lang": "en",
         "pid": "512e893d0a922"
-    },
-    "5163e06f41048": {
-        "title": "Support and Licensing",
-        "template": "toc-sidemenu.html",
-        "slug": "support-and-licensing",
-        "lang": "en",
-        "pid": ""
     }
 }
