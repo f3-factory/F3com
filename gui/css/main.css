@@ -25,6 +25,7 @@ td.center {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
+	z-index: 1050;
 }
 
 .navbar-inner {
