@@ -30,23 +30,22 @@
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
 .sub-header {
-    text-indent: 20px;
     display: none;
+}
+
+.nav .sub-header a {
+	padding-left: 30px;
+}
+.sub-header .sub-header a {
+	padding-left: 40px;
+}
+.sub-header .sub-header .sub-header a {
+	padding-left: 50px;
 }
 
 /* Makes the font smaller for all subheader elements. */
 .sub-header li {
     font-size: 12px;
-}
-
-/* Further indents second level subheader elements. */
-.sub-header .sub-header {
-    text-indent: 30px;
-}
-
-/* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
-.sub-header .sub-header .sub-header {
-    text-indent: 40px;
 }
 
 /* Twitter Bootstrap Override Style */
