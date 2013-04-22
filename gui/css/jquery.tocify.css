@@ -26,6 +26,7 @@
     padding: 0;
     border: none;
     line-height: 30px;
+	font-size: 15px;
 }
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
@@ -44,8 +45,8 @@
 }
 
 /* Makes the font smaller for all subheader elements. */
-.sub-header li {
-    font-size: 12px;
+#toc .sub-header li {
+    font-size: 13px;
 }
 
 /* Twitter Bootstrap Override Style */

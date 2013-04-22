@@ -200,6 +200,11 @@ td.center {
 	.mt10 { margin-top: 10px; }
 	.mb10 { margin-bottom: 10px; }
 
+	#main li {
+		line-height: 25px;
+		font-size: 16px;
+	}
+
 	hr {
 		height: 34px;
 		background: url(../img/hr.png) center top no-repeat;
