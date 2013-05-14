@@ -82,12 +82,12 @@ $(document).ready(function() {
             count: 6,
             include_entities: true
         },                  
-        success: function(data, textStatus, xhr) {            
+        success: function(data, textStatus, xhr) {
             var html = '';  
             for(var i=0, max=data.length; i<max; i++) {
             	html+='<li>'+data[i].text+'</li>';
             }               
-            $(".tweets-slide ul").append($(html));            
+            $(".tweets-slide ul").append($(html));
             $.tweetBarSize();
             $('.tweets-slide').flexslider({
                 animation: "slide",
@@ -107,26 +107,29 @@ $(document).ready(function() {
     /* Table of Contents
     **********************/
     if($('#toc').length != 0 ) {
-	    $("#toc").tocify({
-	        selectors: "h2, h3, h4, h5",
-	        context: '#main',
-	        extendPage:false,
-	        hashGenerator:'pretty',
-	        scrollTo:100
-	    }).data("tocify");
-	
-	    $("#toc").parents('.row').eq(0).css({position:'relative'});
-	    $window = $(window);
-	
-	    $.tocAffix = function(){
-	        var mainBottom = $('#main').offset().top + $('#main').height();
-	        if((mainBottom - $window.height() - ($('#toc').height() - $window.height()) - 90) < $window.scrollTop()) {
-	            $('#toc').toggleClass('bottom',true);
-	        } else {
-	            $('#toc').toggleClass('bottom', false);
-	        }
-	    }
-	    $(window).on('scroll', $.tocAffix);
+        var selectors = 'h2, h3, h4, h5';
+        if($('#main > .row > .span9 h2').length == 0)
+            selectors = 'h3, h4, h5';
+        $("#toc").tocify({
+            selectors: selectors,
+            context: '#main',
+            extendPage:false,
+            hashGenerator:'pretty',
+            scrollTo:100
+        }).data("tocify");
+
+        $("#toc").parents('.row').eq(0).css({position:'relative'});
+        $window = $(window);
+
+        $.tocAffix = function(){
+            var mainBottom = $('#main').offset().top + $('#main').height();
+            if((mainBottom - $window.height() - ($('#toc').height() - $window.height()) - 90) < $window.scrollTop()) {
+                $('#toc').toggleClass('bottom',true);
+            } else {
+                $('#toc').toggleClass('bottom', false);
+            }
+        }
+        $(window).on('scroll', $.tocAffix);
     }
 
     $('.social-btn').tooltip();
