@@ -57,7 +57,7 @@ class Controller
         if(array_key_exists('page',$params) && !empty($params['page'])) {
             $page_slug = $params['page'];
         }
-        
+
         if(!$this->checkEnviroment($f3,$params))
             return;
         
@@ -84,7 +84,7 @@ class Controller
 
             }
         }
-        $title = (array_key_exists('title',$this->data)) ? $this->data['title'] : '';
+        $title = (!empty($this->data['title'])) ? $this->data['title'] : ucwords($page_slug);
         $this->data['title'] = 'Edit Page'.(($title)?': '.$title:'');
 
         $f3->set('FORM_title', $title);
