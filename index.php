@@ -10,7 +10,7 @@
 		Copyright (c) 2013 F3-Junkies
 		http://www.fatfreeframework.com
 
-		@version 0.3.0
+		@version 0.8.0
  **/
 
 $f3 = require __DIR__.'/lib/base.php';
@@ -50,12 +50,22 @@ $f3->route('GET /', function($f3) { $f3->reroute('/home'); });
 // view page
 $f3->route('GET /@page', '\Page\Controller->view');
 // get edit form
-$f3->route('GET /create', '\Page\Controller->edit');
-$f3->route('GET /edit/@page', '\Page\Controller->edit');
-$f3->route('GET /edit/@page/@marker', '\Page\Controller->edit');
+$f3->route(
+    array(
+        'GET /create',
+        'GET /edit/@page',
+        'GET /edit/@page/@marker'
+    ),
+    '\Page\Controller->edit'
+);
 // save page
-$f3->route('POST /edit', '\Page\Controller->save');
-$f3->route('POST /edit/@page', '\Page\Controller->save');
+$f3->route(
+    array(
+        'POST /edit',
+        'POST /edit/@page'
+    ),
+    '\Page\Controller->save'
+);
 // delete page
 $f3->route('GET /delete/@page', '\Page\Controller->delete');
 
