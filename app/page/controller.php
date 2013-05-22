@@ -113,7 +113,8 @@ class Controller
             else
                 $pageTree[] = &$value;
         $f3->set('parentPagesTree', array('' => '/') + $this->renderParentPages($pageTree));
-        $f3->set('REQUEST.pid', $model->pid);
+        if (!$model->dry())
+            $f3->set('REQUEST.pid', $model->pid);
         $this->include = $f3->get('TMPL').'edit.html';
     }
 
