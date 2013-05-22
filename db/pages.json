@@ -117,5 +117,19 @@
         "slug": "web",
         "lang": "en",
         "pid": "512e893d0a427"
+    },
+    "519d1ada1acf4": {
+        "title": "Cache",
+        "template": "toc-sidemenu.html",
+        "pid": "514c93a2c0ed1",
+        "slug": "cache",
+        "lang": "en"
+    },
+    "519d213799cf0": {
+        "title": "Prefab",
+        "template": "fullpage.html",
+        "pid": "514c93a2c0ed1",
+        "slug": "prefab",
+        "lang": "en"
     }
 }
