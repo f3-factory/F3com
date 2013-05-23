@@ -126,10 +126,10 @@
         "lang": "en"
     },
     "519d213799cf0": {
-        "title": "Prefab",
+        "title": "Prefab & Registry",
         "template": "toc-sidemenu.html",
         "pid": "514c93a2c0ed1",
-        "slug": "prefab",
+        "slug": "prefab-registry",
         "lang": "en"
     }
 }
