@@ -131,5 +131,12 @@
         "pid": "514c93a2c0ed1",
         "slug": "prefab-registry",
         "lang": "en"
+    },
+    "519f1d446f071": {
+        "title": "View",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "view",
+        "lang": "en"
     }
 }
