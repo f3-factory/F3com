@@ -145,5 +145,12 @@
         "pid": "512e893d0a427",
         "slug": "iso",
         "lang": "en"
+    },
+    "519f741235e32": {
+        "title": "Sql",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "sql",
+        "lang": "en"
     }
 }
