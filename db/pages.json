@@ -135,14 +135,14 @@
     "519f1d446f071": {
         "title": "View",
         "template": "toc-sidemenu.html",
-        "pid": "512e893d0a427",
+        "pid": "514c93a2c0ed1",
         "slug": "view",
         "lang": "en"
     },
     "519f6b2dbe105": {
         "title": "ISO",
         "template": "toc-sidemenu.html",
-        "pid": "512e893d0a427",
+        "pid": "514c93a2c0ed1",
         "slug": "iso",
         "lang": "en"
     },
@@ -158,6 +158,13 @@
         "template": "toc-sidemenu.html",
         "pid": "512e893d0a427",
         "slug": "jig",
+        "lang": "en"
+    },
+    "51a39d00761e0": {
+        "title": "Cursor",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "cursor",
         "lang": "en"
     }
 }
