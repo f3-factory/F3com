@@ -263,6 +263,9 @@ footer {
 			margin-top: 30px;
 		}
 
+.pt10 { padding-top: 10px; }
+.pt25 { padding-top: 25px; }
+
 /* fix scroll position on anchor links, when top nav bar is fixed */
 h1[id]:before,
 h2[id]:before,
