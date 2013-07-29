@@ -180,5 +180,12 @@
         "pid": "519f741235e32",
         "slug": "sql-mapper",
         "lang": "en"
+    },
+    "51f6f3d205c01": {
+        "title": "Image",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "image",
+        "lang": "en"
     }
 }
