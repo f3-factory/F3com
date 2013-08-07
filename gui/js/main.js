@@ -59,34 +59,35 @@ $(document).ready(function() {
 
 	/* TwitterBar
 	*******************/
+    /*
 	$.tweetBarSize = function() {
         var height_li = 30;
 	    $(".tweets-slide ul li").each(function() {
 	        $(this).css('height', '');
 	        if ($(this).outerHeight(true) > height_li) height_li = $(this).outerHeight(true);
-	    });             
+	    });
 	    $(".tweets-slide ul li").each(function() {
 	        var margin = Math.floor((height_li-$(this).outerHeight(true))/2);
 	        $(this).css('height', height_li);
 	        $(this).children("p").css('margin-top', margin);
-	    }); 
+	    });
 	};
-	
+
 	$.ajax({
         url: 'http://api.twitter.com/1/statuses/user_timeline.json/',
-        type: 'GET',        
-        dataType: 'jsonp',  
-        data: {             
+        type: 'GET',
+        dataType: 'jsonp',
+        data: {
             screen_name: 'phpfatfree',
             include_rts: true,
             count: 6,
             include_entities: true
-        },                  
+        },
         success: function(data, textStatus, xhr) {
-            var html = '';  
+            var html = '';
             for(var i=0, max=data.length; i<max; i++) {
             	html+='<li>'+data[i].text+'</li>';
-            }               
+            }
             $(".tweets-slide ul").append($(html));
             $.tweetBarSize();
             $('.tweets-slide').flexslider({
@@ -102,7 +103,7 @@ $(document).ready(function() {
             $(window).on('resize', $.tweetBarSize);
         }
     });
-
+    */
 
     /* Table of Contents
     **********************/
