@@ -10,7 +10,7 @@
         "title": "API Reference",
         "slug": "api-reference",
         "lang": "en",
-        "template": "left-main.html",
+        "template": "fullpage.html",
         "pid": "512e893d09ff9"
     },
     "512e893d0a922": {
