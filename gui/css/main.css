@@ -124,7 +124,7 @@ td.center {
 
 	.teaser {
 		padding-left: 70px;
-		min-height: 320px;
+		min-height: 220px;
 		margin-bottom: 30px;
 	}
 		#main .teaser h3 {
@@ -146,7 +146,9 @@ td.center {
 		min-height: 500px;
 	}
 
-		#main p {
+		#main p,
+		div > a,
+		article > a {
 			font-size: 1.125em;
 			line-height: 1.4em;
 		}
@@ -265,7 +267,24 @@ footer {
 
 .pt10 { padding-top: 10px; }
 .pt25 { padding-top: 25px; }
+.pb25 { padding-bottom: 25px; }
 
+.label {
+    line-height: 22px;
+    font-size: inherit;
+    padding: 4px 7px;
+    margin-bottom: 4px;
+}
+
+span.label {
+    color: #aaa;
+    background: #ddd;
+    text-shadow: none;
+}
+
+a.label:hover {
+    background: #0088CC;
+}
 /* fix scroll position on anchor links, when top nav bar is fixed */
 h1[id]:before,
 h2[id]:before,
@@ -274,7 +293,6 @@ h4[id]:before,
 h5[id]:before,
 h6[id]:before {
     content: "";
-    display: block;
     height: 100px;
     margin: -100px 0 0;
 }
@@ -422,10 +440,15 @@ ul.tree {
 
 .donate:hover { background-position: -198px -45px; }
 
+#gh-fork,
+#gh-watch {
+    margin-top: 40px;
+}
+
 /* Large desktop */
 @media (min-width: 1200px) {
 	.teaser {
-		min-height: 280px;
+		min-height: 150px;
 	}
 }
 
@@ -461,7 +484,7 @@ ul.tree {
 
 	.teaser {
 		padding-left: 0;
-		min-height: 340px;
+		min-height: 250px;
 		margin-bottom: 30px;
 	}
 
@@ -477,6 +500,19 @@ ul.tree {
 		}
 
 	.home .padded { padding: 0; }
+
+    .navbar .nav > li {
+        line-height: 32px;
+    }
+        .navbar .nav > li > a {
+            padding: 10px 15px;
+        }
+
+    #gh-fork,
+    #gh-watch {
+        margin-top: 10px;
+    }
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -568,16 +604,34 @@ ul.tree {
 			margin-top: 25px;
 		}
 
+    .navbar .nav {
+        margin: 0;
+        float: none;
+        clear: both;
+    }
 	.navbar .nav > li {
 		line-height: 40px;
 	}
 		.navbar .nav > li > a {
 			font-size: 0.9em;
-			padding: 0 5px 0;
+			padding: 0 3px 0;
 		}
 
 	.home .padded {
 		padding: 0;
 	}
+
+    .home .padded ul,
+    .multicolumn + ul,
+    .multicolumn.three + ul {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+
+    #gh-fork,
+    #gh-watch {
+        margin-top: 10px;
+    }
 
 }
