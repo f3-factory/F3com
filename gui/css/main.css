@@ -269,18 +269,20 @@ footer {
 .pt25 { padding-top: 25px; }
 .pb25 { padding-bottom: 25px; }
 
-.label {
+
+.ref .label {
     line-height: 22px;
     font-size: inherit;
     padding: 4px 7px;
     margin-bottom: 4px;
 }
 
-span.label {
+.ref span.label {
     color: #aaa;
     background: #ddd;
     text-shadow: none;
 }
+
 
 a.label:hover {
     background: #0088CC;
