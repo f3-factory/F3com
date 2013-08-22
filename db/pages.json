@@ -170,7 +170,7 @@
     "51a3983aef12b": {
         "title": "Markdown",
         "template": "toc-sidemenu.html",
-        "pid": "514c93a2c0ed1",
+        "pid": "512e893d0a427",
         "slug": "markdown",
         "lang": "en"
     },
@@ -193,6 +193,13 @@
         "template": "toc-sidemenu.html",
         "pid": "51a380d758d14",
         "slug": "jig-mapper",
+        "lang": "en"
+    },
+    "5215434f73b60": {
+        "title": "Template",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "template",
         "lang": "en"
     }
 }
