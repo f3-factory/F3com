@@ -201,5 +201,12 @@
         "pid": "512e893d0a427",
         "slug": "template",
         "lang": "en"
+    },
+    "521914c563929": {
+        "title": "Log",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "log",
+        "lang": "en"
     }
 }
