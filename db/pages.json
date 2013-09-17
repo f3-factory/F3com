@@ -208,5 +208,12 @@
         "pid": "512e893d0a427",
         "slug": "log",
         "lang": "en"
+    },
+    "5238288647e46": {
+        "title": "Auth",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "auth",
+        "lang": "en"
     }
 }
