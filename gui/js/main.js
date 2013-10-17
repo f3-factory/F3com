@@ -10,15 +10,6 @@ $(document).ready(function() {
 		});
 	});*/
 
-	/* PopOver
-	***********/
-	/*$("a[rel=popover]")
-	  .popover()
-	  .click(function(e) {
-	    e.preventDefault()
-	  });*/
-
-
 	/* Smoothscroll
 	****************/
 	$('a[href*=#]').click(function() {
@@ -32,30 +23,6 @@ $(document).ready(function() {
 		   }
 		}
 	});
-
-
-	/* Hidden Sections
-	*******************/
-	/*$("button.more").show();
-	$(".collapse").collapse().on('show',function(){
-		$(this).prev('button.more').text('hide details');
-	}).on('hide',function(){
-		$(this).prev('button.more').text('view details');
-	});*/
-
-
-	/* SearchBox
-	*******************/
-	/*if($('#search-query').length != 0 && $('.package h3').length != 0) {
-		$('#search-query').show().quicksearch('.package h3', {
-			'show': function () {
-				$(this).parent().show();
-			},
-			'hide': function () {
-				$(this).parent().hide();
-			},
-		});
-	}*/	
 
 	/* TwitterBar
 	*******************/

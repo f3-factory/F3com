@@ -215,5 +215,19 @@
         "pid": "512e893d0a427",
         "slug": "auth",
         "lang": "en"
+    },
+    "525ffeefd6993": {
+        "title": "Mongo",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "mongo",
+        "lang": "en"
+    },
+    "52600d07d60f9": {
+        "title": "Mongo-Mapper",
+        "template": "toc-sidemenu.html",
+        "pid": "525ffeefd6993",
+        "slug": "mongo-mapper",
+        "lang": "en"
     }
 }
