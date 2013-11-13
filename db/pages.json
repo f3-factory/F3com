@@ -229,5 +229,19 @@
         "pid": "525ffeefd6993",
         "slug": "mongo-mapper",
         "lang": "en"
+    },
+    "5282529860cff": {
+        "title": "Bcrypt",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "bcrypt",
+        "lang": "en"
+    },
+    "5283b33f6075b": {
+        "title": "Test",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "test",
+        "lang": "en"
     }
 }
