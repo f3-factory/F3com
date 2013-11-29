@@ -257,5 +257,12 @@
         "pid": "512e893d0a427",
         "slug": "matrix",
         "lang": "en"
+    },
+    "5298439b3a0ac": {
+        "title": "Session",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "session",
+        "lang": "en"
     }
 }
