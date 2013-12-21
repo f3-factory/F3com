@@ -271,5 +271,12 @@
         "pid": "519f1d446f071",
         "slug": "preview",
         "lang": "en"
+    },
+    "52b57e1f32c12": {
+        "title": "Basket",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "basket",
+        "lang": "en"
     }
 }
