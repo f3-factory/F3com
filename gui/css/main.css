@@ -1,5 +1,6 @@
 /* font config */
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400);
 
 body, p, input, button, select, textarea, .navbar-search .search-query {
 	font-family: 'Ubuntu', sans-serif;
@@ -42,22 +43,55 @@ td.center {
 		border-width: 0 0 2px;
 	}
 
+.navbar .nav {
+	margin: 0;
+}
+.navbar-content.collapse {
+	height: auto;
+	overflow: visible;
+}
+
+.navbar .container .btn-navbar {
+	display: none;
+}
+
+.navbar .btn-navbar {
+	margin-top: 33px;
+	background-color: #2C4557;
+	background-image: none !important;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar:focus
+{
+	background-color: #3084AB;
+}
+
+
 .navbar .nav > li {
-	line-height: 61px;
+	line-height: 40px;
+	margin-top: 23px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+
 }
 
 	.navbar .nav > li > a {
-		padding: 20px 15px 0px;
-		font-size: 1.3em;
+		padding: 10px 15px;
+		font-size: 1.55em;
+		letter-spacing: 1px;
 		color: #FFF;
-		font-weight: bold;
-		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+		/*font-weight: bold;*/
+		/*text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);*/
 	}
 
 	.navbar .nav > .active > a,
 	.navbar .nav > .active > a:hover,
 	.navbar .nav > .active > a:focus {
-		font-family: Ubuntu, sans-serif;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
 		color: #FFF;
 		background: url(../img/nav_active.png) repeat-x bottom left;
 		-webkit-box-shadow: none;
@@ -153,8 +187,8 @@ td.center {
 			line-height: 1.4em;
 		}
 		#main h1 {
-	        font-size: 34px;
-	    }
+			font-size: 34px;
+		}
 		#main h2 {
 			color: #2F6185;
 			font-size: 1.8em;
@@ -212,11 +246,11 @@ td.center {
 		background: url(../img/hr.png) center top no-repeat;
 		border: none;
 	}
-    blockquote hr {
-        height: 1px;
-        background: none;
-        border: 1px solid #eeeeee;
-    }
+	blockquote hr {
+		height: 1px;
+		background: none;
+		border: 1px solid #eeeeee;
+	}
 
 	.home .padded {
 		padding: 0 70px;
@@ -271,21 +305,21 @@ footer {
 
 
 .ref .label {
-    line-height: 22px;
-    font-size: inherit;
-    padding: 4px 7px;
-    margin-bottom: 4px;
+	line-height: 22px;
+	font-size: inherit;
+	padding: 4px 7px;
+	margin-bottom: 4px;
 }
 
 .ref span.label {
-    color: #aaa;
-    background: #ddd;
-    text-shadow: none;
+	color: #aaa;
+	background: #ddd;
+	text-shadow: none;
 }
 
 
 a.label:hover {
-    background: #0088CC;
+	background: #0088CC;
 }
 /* fix scroll position on anchor links, when top nav bar is fixed */
 h1[id]:before,
@@ -294,9 +328,9 @@ h3[id]:before,
 h4[id]:before,
 h5[id]:before,
 h6[id]:before {
-    content: "";
-    height: 100px;
-    margin: -100px 0 0;
+	content: "";
+	height: 100px;
+	margin: -100px 0 0;
 }
 
 /* wait for Javascript to show things it powers */
@@ -321,7 +355,7 @@ ul.tree, ul.tree ul {
 ul.tree {
 	background-position: 1em 0;
 	padding-left: 1em;
-    padding-top: 6px;
+	padding-top: 6px;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	-webkit-border-radius: 4px;
@@ -342,68 +376,68 @@ ul.tree {
 			padding-bottom: 0.5ex;
 		}
 
-        ul.tree li .label {
-            margin-left: 12px;
-        }
+		ul.tree li .label {
+			margin-left: 12px;
+		}
 
 
 /* twitter ticker */
 .tweets {
-    margin-top: 40px;
-    background-color: #2E6085;    
-    padding: 20px 0 10px;
-    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
-    box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
+	margin-top: 40px;
+	background-color: #2E6085;
+	padding: 20px 0 10px;
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
 	min-height: 50px;
 }
 	.twitter-wrapper {
-	    position: relative;
+		position: relative;
 		padding: 10px 0 10px 0;
 	}
 	#tweetnav {
-	    float: left;
-	    height: auto;
-	    position: absolute;
-	    width: 11px;
+		float: left;
+		height: auto;
+		position: absolute;
+		width: 11px;
 	}
 		#tweetnav .flex-prev {
-		    background: url("../img/tw_arrow.png") no-repeat 0 0;
-		    display: block;
-		    height: 6px;
-		    left: 0;
-		    margin-bottom: 7px;
-		    width: 11px;
+			background: url("../img/tw_arrow.png") no-repeat 0 0;
+			display: block;
+			height: 6px;
+			left: 0;
+			margin-bottom: 7px;
+			width: 11px;
 		}
 		#tweetnav .flex-next {
-		    background: url("../img/tw_arrow.png") no-repeat 0 -6px;
-		    display: block;
-		    height: 6px;
-		    left: 0;
-		    width: 11px;
+			background: url("../img/tw_arrow.png") no-repeat 0 -6px;
+			display: block;
+			height: 6px;
+			left: 0;
+			width: 11px;
 		}
 		#tweetnav .flex-direction-nav a {
-		    position: inherit;
+			position: inherit;
 		}
-		
+
 	#follow_img {
-	    position: absolute;
-	    right: 0;
-	    top: 16%;
+		position: absolute;
+		right: 0;
+		top: 16%;
 	}
 	#prev_t,
 	#next_t {
-	    display: block;
-	    color: #fff;
+		display: block;
+		color: #fff;
 	}
 	.tweets-slide {
-	    display: block;
-	    color: #fff;    
-	    overflow: hidden;
-	    padding-left: 20px;
-	    padding-right: 180px;
+		display: block;
+		color: #fff;
+		overflow: hidden;
+		padding-left: 20px;
+		padding-right: 180px;
 	}
 		.tweets-slide li {
-		    min-height: auto;
+			min-height: auto;
 		}
 
 #toc.affix-bottom {
@@ -442,9 +476,10 @@ ul.tree {
 
 .donate:hover { background-position: -198px -45px; }
 
-#gh-fork,
-#gh-watch {
-    margin-top: 40px;
+#gh-buttons {
+	position: absolute;
+	top: 10px;
+	right: 5px;
 }
 
 /* Large desktop */
@@ -476,7 +511,7 @@ ul.tree {
 			margin-left: 40px;
 			margin-top: 40px;
 		}
-		
+
 			.headTxt ul li {
 				color: #d2e1f1;
 				font-size: 1.5em;
@@ -495,7 +530,7 @@ ul.tree {
 			margin-left: 0;
 			margin-right: 10px;
 		}
-		
+
 		#main .teaser h3 {
 			font-size: 1.6em;
 			line-height: 1.2em;
@@ -503,17 +538,9 @@ ul.tree {
 
 	.home .padded { padding: 0; }
 
-    .navbar .nav > li {
-        line-height: 32px;
-    }
-        .navbar .nav > li > a {
-            padding: 10px 15px;
-        }
-
-    #gh-fork,
-    #gh-watch {
-        margin-top: 10px;
-    }
+	.navbar .nav > li {
+		margin-top: 22px;
+	}
 
 }
 
@@ -540,28 +567,33 @@ ul.tree {
 			padding: 0 20px;
 		}
 
-    .headTxt {
-	    position: static;
-	    width: 80%;
-	    font-size: 0.8em;
-	    margin-top: 40px;
-	    padding-left: 10%;
-    }
+	.headTxt {
+		position: static;
+		width: 80%;
+		font-size: 0.8em;
+		margin-top: 40px;
+		padding-left: 10%;
+	}
 
 		.headTxt ul {
 			list-style: disc;
 			margin-left: 40px;
 			margin-top: 25px;
 		}
-	
+
 			.headTxt ul li {
 				color: #d2e1f1;
 				font-size: 1.4em;
 				line-height: 1.6em;
 			}
 
+	.brand img {
+		max-width: 110px;
+		margin-top: 14px;
+	}
 	.navbar .nav > li > a {
-		font-size: 1.1em;
+		font-size: 1.15em;
+		padding: 10px 8px;
 	}
 
 	.teaser {
@@ -580,12 +612,12 @@ ul.tree {
 		padding: 0;
 	}
 
-    #toc {
-	    position: static !important;
-    }
-        #toc ul ul {
-	        display: none !important;
-        }
+	#toc {
+		position: static !important;
+	}
+		#toc ul ul {
+			display: none !important;
+		}
 
 }
 
@@ -606,34 +638,61 @@ ul.tree {
 			margin-top: 25px;
 		}
 
-    .navbar .nav {
-        margin: 0;
-        float: none;
-        clear: both;
-    }
+	.navbar .nav {
+		margin: 0;
+		float: none;
+		clear: both;
+	}
 	.navbar .nav > li {
 		line-height: 40px;
+		width: 100%;
+		margin-top: 0;
+		border-top: 1px solid #8dbfff;
+	}
+
+	.navbar .nav > li:first-child {
+		border-top: none;
+	}
+
+	.navbar .nav > li.active a {
+		background: #284155 !important;
 	}
 		.navbar .nav > li > a {
-			font-size: 0.9em;
-			padding: 0 3px 0;
+			padding: 0 8px;
+			/*font-size: 0.9em;*/
+			/*padding: 0 3px 0;*/
 		}
+
+	.brand img {
+		margin-top: 0;
+		max-width: 100%;
+	}
+	.navbar .container .btn-navbar {
+		display: block;
+	}
+
+	.navbar-content {
+		clear: both;
+	}
+	.navbar-content.collapse {
+		height: 0;
+		overflow: hidden;
+	}
 
 	.home .padded {
 		padding: 0;
 	}
 
-    .home .padded ul,
-    .multicolumn + ul,
-    .multicolumn.three + ul {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
-        column-count: 1;
-    }
+	.home .padded ul,
+	.multicolumn + ul,
+	.multicolumn.three + ul {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
 
-    #gh-fork,
-    #gh-watch {
-        margin-top: 10px;
-    }
+	#gh-buttons {
+		display: none;
+	}
 
 }

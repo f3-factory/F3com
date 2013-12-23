@@ -29,16 +29,23 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-content">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="brand" href="home"><img src="{{@UI}}img/logo-dark.png" alt="Fat-Free Framework" /></a>
-                <iframe id="gh-fork" class="pull-right"
-                        src="http://ghbtns.com/github-btn.html?user=bcosca&repo=fatfree&type=fork&count=true"
-                        allowtransparency="true" frameborder="0" scrolling="0" width="95px"
-                        height="20px"></iframe>
-                <iframe id="gh-watch" class="pull-right"
-                        src="http://ghbtns.com/github-btn.html?user=bcosca&repo=fatfree&type=watch&count=true"
-                        allowtransparency="true" frameborder="0" scrolling="0" width="95px"
-                        height="20px"></iframe>
-                <div class="navbar-content">
+                <div id="gh-buttons">
+                    <iframe id="gh-fork" class="pull-right"
+                            src="http://ghbtns.com/github-btn.html?user=bcosca&repo=fatfree&type=fork&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="95px"
+                            height="20px"></iframe>
+                    <iframe id="gh-watch" class="pull-right"
+                            src="http://ghbtns.com/github-btn.html?user=bcosca&repo=fatfree&type=watch&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="95px"
+                            height="20px"></iframe>
+                </div>
+                <div class="collapse navbar-content">
                     <navigation menu="main" tmpl="navigation_main.html"></navigation>
                 </div>
             </div>
