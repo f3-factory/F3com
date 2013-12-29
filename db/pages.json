@@ -320,5 +320,12 @@
         "pid": "514c93a2c0ed1",
         "slug": "magic",
         "lang": "en"
+    },
+    "52bf5929070e3": {
+        "title": "Google Static Maps V2",
+        "template": "toc-sidemenu.html",
+        "pid": "51636a7e3c21f",
+        "slug": "google-static-maps",
+        "lang": "en"
     }
 }
