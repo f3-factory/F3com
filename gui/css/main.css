@@ -482,6 +482,63 @@ ul.tree {
 	right: 5px;
 }
 
+
+#gse-wrapper {
+	/* google search embed -full width view */
+	position: absolute;
+	top: 35px;
+	right: 10px;
+}
+
+
+/* google search embed style overrides BEGIN */
+.gsc-control-cse {
+    font-family: Arial, sans-serif;
+   /* remove colors */
+   /*
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+   */
+  }
+  .gsc-control-cse .gsc-table-result {
+    font-family: Arial, sans-serif;
+  }
+  input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border-color: #D9D9D9;
+	/* custom set width & height of google search box */
+	width:200px;
+	height:20px;
+  }
+  input.gsc-search-button {
+   /*  border-color: #666666; */
+    background-color: #e6e6e6;
+    background-image: none;
+    filter: none;
+	font: bold 11px/14px "Helvetica Neue",Helvetica,Arial,sans-serif;	
+	/* margin-top: -5px;  */
+	height: 25px;
+	padding: 2px 5px 2px 4px;
+	border-radius: 7px;
+	width: 75px;
+	
+  }
+  
+  input.gsc-search-button:hover, input.gsc-search-button:focus {
+    background-color: #3072b3;
+	color: #e6e6e6;
+  }
+  
+  table.gsc-search-box td.gsc-search-button {
+    vertical-align:top;
+  }
+  
+  td.gsc-branding-text { display:none; }
+  td.gsc-branding-img { display:none; }
+  
+  /* google search embed overrides END */
+
+
+
 /* Large desktop */
 @media (min-width: 1200px) {
 	.teaser {
@@ -693,6 +750,14 @@ ul.tree {
 
 	#gh-buttons {
 		display: none;
+	}
+	
+	#gse-wrapper {
+	/* google search embed <480px view */
+	position: relative;
+	top: 0px;
+	right: 0px;
+	
 	}
 
 }
