@@ -35,6 +35,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="brand" href="home"><img src="{{@UI}}img/logo-dark.png" alt="Fat-Free Framework" /></a>
+                <!-- Google Search Embed wrapper BEGIN -->
+                <div id="gse-wrapper">
+		    <div id="cse"></div>
+		</div>
+		<!-- Google Search Embed wrapper END -->
                 <div id="gh-buttons">
                     <iframe id="gh-fork" class="pull-right"
                             src="http://ghbtns.com/github-btn.html?user=bcosca&repo=fatfree&type=fork&count=true"
@@ -120,6 +125,27 @@
         });
     </script>
     <![endif]-->
+
+    <!-- Google Search Embed scripts BEGIN -->    
+    <script src="//www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load('search', '1', {language: 'en'});
+        google.setOnLoadCallback(function() {
+            var customSearchOptions = {};
+            var orderByOptions = {};
+            orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+            customSearchOptions['enableOrderBy'] = true;
+            customSearchOptions['orderByOptions'] = orderByOptions;
+            customSearchOptions['overlayResults'] = true;
+            var customSearchControl =   new google.search.CustomSearchControl('000562482926360859760:ogbooto108q', customSearchOptions);
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.setAutoComplete(true);
+            customSearchControl.draw('cse', options);
+        }, true);
+    </script>
+    <!-- Google Search Embed Scripts END -->
+
 </body>
 </html>
 
