@@ -327,5 +327,12 @@
         "pid": "51636a7e3c21f",
         "slug": "google-static-maps",
         "lang": "en"
+    },
+    "53306b9374f67": {
+        "title": "Extended Templating",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a922",
+        "slug": "extended-templating",
+        "lang": "en"
     }
 }
