@@ -281,6 +281,15 @@ td.center {
 			font-weight: bold;
 		}
 
+ul.reference {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.reference li {
+	display: inline;
+}
 
 footer {
 	background: #252528 url(../img/footer_bg2.png);
