@@ -1,0 +1,4 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/F3Community/F3com-data.git
+	branch = master
