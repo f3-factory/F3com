@@ -1,22 +1,11 @@
-<div id="main" class="container mt10">
+<div id="main" class="container">
 	<div class="row">
-	    <div class="span3">
-            <div id="toc" class="span3"></div>
-	    </div>
-	    <div class="span9 clearfix">
-	        <!--<ul class="breadcrumb">
-	            <li>
-	                <a href="#">Home</a>
-	                <span class="divider">/</span>
-	            </li>
-	            <li>
-	                <a href="#">Documentation</a>
-	                <span class="divider">/</span>
-	            </li>
-	            <li class="active">Guide</li>
-	        </ul>-->	        
-	        <a class="btn btn-small pull-right" href="edit/{{@PARAMS.page}}/main"><i class="icon-pencil"></i> edit</a>
-            <markdown src="{{@layout.main}}"></markdown>
-	    </div>
+		<div class="col-sm-3">
+			<div id="toc"></div>
+		</div>
+		<div class="col-sm-9">
+			<a class="btn btn-small pull-right btn-default visible-lg" href="edit/{{@PARAMS.page}}/main"><i class="fa fa-pencil"></i> edit</a>
+			<markdown src="{{@layout.main}}"></markdown>
+		</div>
 	</div>
 </div>

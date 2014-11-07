@@ -1,42 +1,26 @@
 <div id="main" class="container">
-    <div class="row">
-        <div class="span12">
-            <form method="post" action="{{@ACTION}}">
-                <fieldset>
-                    <legend>Edit Page</legend>
-                    <!-- title -->
-                    <div class="control-group">
-                        <label class="control-label" for="inputTitle">Title</label>
-                        <div class="controls">
-                            <input type="text" id="inputTitle" name="title" value="{{@FORM_title}}"
-                                   placeholder="Give me a meaningful name">
-                        </div>
-                    </div>
-                    <!-- template -->
-                    <div class="control-group">
-                        <label class="control-label" for="inputTemplate">Template</label>
-
-                        <div class="controls">
-                            <select id="inputTemplate" name="template" group="{{@templates}}"></select>
-                        </div>
-                    </div>
-                    <!-- parent -->
-                    <div class="control-group">
-                        <label class="control-label" for="pid">Parent Page</label>
-
-                        <div class="controls">
-                            <select id="inputPID" name="pid" group="{{@parentPagesTree}}"></select>
-                        </div>
-                    </div>
-                    <include if="{{isset(@backend_layout)}}" href="{{@backend_layout}}"></include>
-                    <!-- submit -->
-                    <div class="control-group">
-                        <div class="controls">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
+	<div class="row">
+		<form method="post" action="{{@ACTION}}">
+			<fieldset>
+				<div class="form-group">
+					<label for="inputTitle">Title</label>
+					<input class="form-control" type="text" id="inputTitle" name="title" value="{{@FORM_title}}" placeholder="Give me a meaningful name">
+				</div>
+				<div class="form-group">
+					<label for="inputTemplate">Template</label>
+					<select class="form-control" id="inputTemplate" name="template" group="{{@templates}}"></select>
+				</div>
+				<div class="form-group">
+					<label for="pid">Parent Page</label>
+					<select class="form-control" id="inputPID" name="pid" group="{{@parentPagesTree}}"></select>
+				</div>
+				<include if="{{isset(@backend_layout)}}" href="{{@backend_layout}}"></include>
+				<div class="form-group">
+					<div class="col-md-1">
+						<button type="submit" class="form-control btn btn-primary">Save</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </div>

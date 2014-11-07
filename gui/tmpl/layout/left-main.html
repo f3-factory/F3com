@@ -1,11 +1,11 @@
-<div id="main" class="container mt10">
+<div id="main" class="container">
 	<div class="row">
-	    <div class="span3 pt25">
-            <markdown src="{{@layout.left}}"></markdown>
-        </div>
-	    <div class="span9 clearfix">
-	    	<a class="btn btn-small pull-right" href="edit/{{@PARAMS.page}}/main"><i class="icon-pencil"></i> edit</a>
-	        <markdown src="{{@layout.main}}"></markdown>
-	    </div>
+		<div class="col-sm-3 leftMain">
+			<markdown src="{{@layout.left}}"></markdown>
+		</div>
+		<div class="col-sm-9 clearfix">
+			<a class="btn btn-small pull-right btn-default visible-lg" href="edit/{{@PARAMS.page}}/main"><i class="fa fa-pencil"></i> edit</a>
+			<markdown src="{{@layout.main}}"></markdown>
+		</div>
 	</div>
 </div>
