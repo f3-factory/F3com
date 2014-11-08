@@ -145,12 +145,15 @@ td.center {
 
 .masthead h1 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 4em;
+	font-size: 5.1em;
+	margin-bottom: 0;
 }
 
 .masthead h2 {
 	font-size: 1.2em;
 	line-height: 1.3em;
+	margin-bottom: 5px;
+	margin-top: 0;
 }
 
 .headTxt {
@@ -164,13 +167,13 @@ td.center {
 
 .headTxt ul {
 	list-style: none;
-	margin-top: 10px;
+	margin-top: 0;
 }
 
 .headTxt ul li {
 	color: #d2e1f1;
 	font-size: 1.2em;
-	line-height: 1.6em;
+	line-height: 1.8em;
 }
 
 .teaser {
@@ -676,6 +679,12 @@ code {
 	.masthead {
 		width: 100%;
 		height: 280px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#main {
+		padding-bottom: 20px;
 	}
 
 	footer:nth-child(1) > *, footer:nth-child(3) > * {
@@ -690,14 +699,14 @@ code {
 		width: 100%;
 	}
 
-	.masthead .container {
+	#scale {
 		background: url(../img/scale_mobile.png) center top no-repeat;
 	}
 
 	.headTxt {
 		position: static;
 		width: 80%;
-		font-size: 0.8em;
+		font-size: 0.7em;
 		margin-top: 40px;
 		padding-left: 10%;
 	}
