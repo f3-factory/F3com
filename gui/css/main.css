@@ -714,7 +714,7 @@ code {
 	.headTxt ul {
 		list-style: disc;
 		margin-top: 25px;
-		padding-left: 40px;
+		padding-left: 30px;
 	}
 
 	.headTxt ul li {
@@ -767,15 +767,20 @@ code {
 	.headTxt {
 		position: static;
 		width: 90%;
-		font-size: 0.7em;
-		margin-top: 40px;
+		font-size: 0.6em;
+		margin-top: 30px;
 		padding-left: 0;
 	}
 
 	.headTxt ul {
 		list-style: disc;
-		margin-left: 20px;
+		margin-left: 0px;
 		margin-top: 25px;
+	}
+
+	.masthead h1 {
+		margin-bottom: 10px;
+		line-height: 0.9em;
 	}
 
 	.navbar .nav {
