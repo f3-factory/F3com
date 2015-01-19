@@ -317,7 +317,7 @@ ul.reference li {
 footer {
 	position: absolute;
 	bottom: 0px;
-	height: 70px;
+	/*height: 70px;*/
 	width: 100%;
 }
 
