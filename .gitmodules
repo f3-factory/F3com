@@ -2,3 +2,7 @@
 	path = content
 	url = https://github.com/F3Community/F3com-data.git
 	branch = master
+[submodule "lib"]
+	path = lib
+	url = https://github.com/bcosca/fatfree-core.git
+	branch = master
