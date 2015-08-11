@@ -3,7 +3,14 @@
 <head>
 	<base href="{{ViewHelper::getBaseUrl()}}">
 	<meta charset="utf-8">
-	<title>{{ @page.title }} | Fat-Free Framework for PHP</title>
+	<check if="{{ @page.title != 'Home' }}">
+		<true>
+			<title>{{ @page.title }} | Fat-Free Framework for PHP</title>
+		</true>
+		<false>
+			<title>Fat-Free Framework for PHP</title>
+		</false>
+	</check>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust web applications - fast!">
 	<meta name="author" content="F3::Community">
