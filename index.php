@@ -24,6 +24,7 @@ $f3->set('CACHE', FALSE);
 // set paths
 $f3->set('UI', 'gui/');
 $f3->set('LOCALES', 'dict/');
+$f3->set('LANGUAGE','en-US,en-GB');
 $f3->set('TEMP', 'temp/');
 $f3->set('TMPL', 'tmpl/');
 // markdown content data
