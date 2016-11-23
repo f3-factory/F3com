@@ -1,7 +1,22 @@
 <ul class="nav navbar-nav cl-effect-1">
-    <repeat group="{{@menu}}" value="{{@page}}">
-    <li{{(@page.active)?' class="active"':''}}>
-    <a href="{{@page.slug}}">{{@page.title}}</a>
-    </li>
-    </repeat>
+	<repeat group="{{@menu}}" value="{{@page}}">
+		<li{{(@page.active)?' class="active"':''}}>
+			<a href="{{@page.slug}}">{{@page.title}}</a>
+		</li>
+	</repeat>
+	<li class="dropdown version-chooser">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{@PARAMS.version}} <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			<repeat group="{{@DOCVERSIONS}}" value="{{@docversion}}">
+				<check if="{{@docversion == @PARAMS.version}}">
+					<true>
+					<li class="active"><a href="{{@BASE}}/{{@docversion}}/{{@PARAMS.page}}">Release {{@docversion}}</a></li>
+					</true>
+					<false>
+						<li><a href="{{@BASE}}/{{@docversion}}/{{@PARAMS.page}}">Release {{@docversion}}</a></li>
+					</false>
+				</check>
+			</repeat>
+		</ul>
+	</li>
 </ul>

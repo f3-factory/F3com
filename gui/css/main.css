@@ -1,7 +1,7 @@
 /* font config */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic);
+@import url(//fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
 
 html {
 	position: relative;
@@ -87,31 +87,6 @@ td.center {
 	background: transparent;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
-}
-
-.cl-effect-1 a::before,
-.cl-effect-1 a::after {
-	display: inline-block;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
-	transition: transform 0.3s, opacity 0.2s;
-}
-
-.cl-effect-1 a::before {
-	margin-right: 10px;
-	content: '[';
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
-	transform: translateX(20px);
-}
-
-.cl-effect-1 a::after {
-	margin-left: 10px;
-	content: ']';
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	transform: translateX(-20px);
 }
 
 .cl-effect-1 a:hover::before,
@@ -587,6 +562,17 @@ code {
 	to   { background-position: center -666px; }
 }
 
+
+.version-chooser {
+	background: #2F6185;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+
+.version-chooser a.dropdown-toggle {
+	color: #FFF !important;
+	padding: 0px 15px !important;
+}
 
 /* Large desktop */
 @media (min-width: 1200px) {

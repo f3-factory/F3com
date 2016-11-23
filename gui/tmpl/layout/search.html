@@ -1,0 +1,22 @@
+<div class="container">
+	<check if="{{isset(@GET.q) && @GET.q != ''}}">
+	<true>
+		<h2>Search: <em>{{@GET.q}}</em></h2>
+		<check if="{{count(@results)}}">
+		<true>
+			<repeat group="{{@results}}" value="{{@result}}">
+				<h3><a href="{{@BASE}}/{{@result.file}}">{{@result.title}}</a></h3>
+				<p>{{Markdown::instance()->convert(@result.line)}}</p>
+			</repeat>
+		</true>
+		<false>
+			<p div class="alert alert-info">No results</p>
+		</false>
+		</check>
+	</true>
+	<false>
+		<h2>Search</h2>
+		<p div class="alert alert-warning">No query specified.</p>
+	</false>
+	</check>
+</div>
