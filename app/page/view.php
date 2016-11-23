@@ -1,17 +1,17 @@
 <?php
-/**
-	Page View
+/*
+This file is part of F3::WIKI
 
-	The contents of this file are subject to the terms of the GNU General
-	Public License Version 3.0. You may not use this file except in
-	compliance with the license. Any of the license terms and conditions
-	can be waived if you get permission from the copyright holder.
+The contents of this file are subject to the terms of the GNU General
+Public License Version 3.0. You may not use this file except in
+compliance with the license. Any of the license terms and conditions
+can be waived if you get permission from the copyright holder.
+*/
 
- **/
 namespace Page;
 
-class View {
-
+class View 
+{
 	/**
 	 * deploy data to template and render it
 	 * @param array $data
@@ -21,7 +21,6 @@ class View {
 	public function render($data, $file)
 	{
 		\Base::instance()->mset($data);
-        return \Template::instance()->render($file);
+		return \Template::instance()->render($file);
 	}
-
 }
