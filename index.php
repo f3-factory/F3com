@@ -20,6 +20,7 @@ $f3->set('AUTOLOAD', 'inc/;app/');
 $f3->set('DEBUG', 1);
 $f3->set('TZ', 'Europe/Berlin');
 $f3->set('CACHE', FALSE);
+$f3->set('HIGHLIGHT', TRUE);
 
 // set paths
 $f3->set('UI', 'gui/');
@@ -27,6 +28,7 @@ $f3->set('LOCALES', 'dict/');
 $f3->set('LANGUAGE','en-US,en-GB');
 $f3->set('TEMP', 'temp/');
 $f3->set('TMPL', 'tmpl/');
+
 
 // set existing doc versions
 $f3->set('DOCVERSIONS', array('3.6', '3.5'));
