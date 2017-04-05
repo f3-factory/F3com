@@ -36,10 +36,10 @@ class Controller
 		if (is_int(strpos(strtolower($f3->get('HOST')), $f3->get('DOMAIN')))) {
 
 			if (array_key_exists('marker', $params) && !empty($params['marker'])) {
-				$edit_link = $f3->get('REPO').'/edit/master/'.
+				$edit_link = $f3->get('REPO').'/edit/master/'.$params['version'].'/'.
 							 $params['page'].'/'.$params['marker'].'.md';
 			} else {
-				$edit_link = $f3->get('REPO').'/tree/master/'.$params['page'];
+				$edit_link = $f3->get('REPO').'/tree/master/'.$params['version'].'/'.$params['page'];
 			}
 			$f3->set('edit_link', $edit_link);
 			$this->include = $f3->get('TMPL').'fork.html';
