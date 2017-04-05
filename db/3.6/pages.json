@@ -334,5 +334,12 @@
         "pid": "512e893d0a922",
         "slug": "extended-templating",
         "lang": "en"
+    },
+    "58e562672a7eb2.29691899": {
+        "title": "OAuth2",
+        "template": "toc-sidemenu.html",
+        "pid": "512e893d0a427",
+        "slug": "oauth2",
+        "lang": "en"
     }
 }
