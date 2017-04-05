@@ -126,7 +126,7 @@ class Controller
 		foreach ($pageTree as $page) {
 			$return[$page['_id']] = $lvl.' '.$page['title'];
 			if (array_key_exists('childs', $page) && !empty($page['childs']))
-				$return = $return + $this->renderParentPages($page['childs'], $lvl.'&nbsp;&nbsp;.&nbsp;&nbsp;');
+				$return = $return + $this->renderParentPages($page['childs'], $lvl.'  .  ');
 		}
 		return $return;
 	}
@@ -186,7 +186,7 @@ class Controller
 		$model->slug = $slug_title;
 		$model->lang = 'en'; // TODO: support multilanguage
 		$model->save();
-
+		$f3->set('PARAMS.page', $slug_title);
 		$this->data['title'] = 'page saved successfully';
 		$this->include = $f3->get('TMPL').'saved.html';
 	}
@@ -308,21 +308,28 @@ class Controller
 	{
 		$f3 = \Base::instance();
 
+		if ($f3->exists('PARAMS.version',$version) && in_array($version, $f3->get('DOCVERSIONS'))) {
+			// init DB with chosen version
+			$f3->set('DB', new \DB\Jig('db/'.$f3->get('PARAMS.version').'/'));
+			// markdown content data
+			$f3->set('MDCONTENT', 'content/'.$f3->get('PARAMS.version').'/');
+		}
+
 		// this part will make sure all variants of urls still work
-		if($f3->exists('PARAMS.version') && $f3->exists('PARAMS.page')) {
-			if(in_array($f3->get('PARAMS.version'), $f3->get('DOCVERSIONS'))) {
+		if ($version) {
+			if (in_array($version, $f3->get('DOCVERSIONS'))) {
 				// init DB with chosen version
-				$f3->set('DB', new \DB\Jig('db/'.$f3->get('PARAMS.version').'/'));
+				$f3->set('DB', new \DB\Jig('db/'.$version.'/'));
 
 				// markdown content data
-				$f3->set('MDCONTENT', 'content/'.$f3->get('PARAMS.version').'/');
+				$f3->set('MDCONTENT', 'content/'.$version.'/');
 			} else {
 				// redirect to first element in DOCVERSIONS (meant to be latest)
 				$f3->reroute('/'.$f3->get('DOCVERSIONS.0').'/'.$f3->get('PARAMS.page'));
 			}
-		} else {
+		} elseif ($f3->get('ALIAS') == 'legacy_view') {
 			// check if current "page" is actually the docs version
-			if(in_array($f3->get('PARAMS.page'), $f3->get('DOCVERSIONS'))) {
+			if (in_array($f3->get('PARAMS.page'), $f3->get('DOCVERSIONS'))) {
 				// looks like someone accessed only the version page
 				// let's send him to the requested version's home
 				$f3->reroute('/'.$f3->get('PARAMS.page').'/home');
