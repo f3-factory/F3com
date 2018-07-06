@@ -1,9 +1,8 @@
-F3com
-=====
+# F3com
 
 This repository contains the [fatfreeframework.com](https://fatfreeframework.com) website / wiki.
 
-##Installation
+## Installation
 
 The project consists of two different repositories. One with the code, another
 with the data. To clone both use the following command
