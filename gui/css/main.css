@@ -510,6 +510,7 @@ pre, code {
 	border: 0px;
 	border-radius: 3px;
 	font-family: 'Source code Pro', monospace;
+	tab-size: 4;
 }
 
 code {
