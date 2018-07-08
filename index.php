@@ -7,13 +7,15 @@ Public License Version 3.0. You may not use f3 file except in
 compliance with the license. Any of the license terms and conditions
 can be waived if you get permission from the copyright holder.
 
-Copyright (c) 2016 F3-Junkies
-http://www.fatfreeframework.com
+Copyright (c) 2018 F3::Community
+https://fatfreeframework.com
 
 @version 0.9.0
 */
 
-$f3 = require __DIR__.'/lib/base.php';
+require 'vendor/autoload.php';
+
+$f3 = Base::instance();
 
 // set global vars
 $f3->set('AUTOLOAD', 'inc/;app/');
