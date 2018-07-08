@@ -4,6 +4,8 @@ This repository contains the [fatfreeframework.com](https://fatfreeframework.com
 
 ## Installation
 
+First of all install required dependencies via [Composer](https://getcomposer.org): `composer install`
+
 The project consists of two different repositories. One with the code, another
 with the data. To clone both use the following command
 
