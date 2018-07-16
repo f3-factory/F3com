@@ -45,18 +45,18 @@ $f3->set('REPO', 'https://github.com/F3Community/F3com-data');
 $f3->set('DOMAIN', 'fatfreeframework.com');
 
 // default page
-$f3->route('GET /', function($f3) { $f3->reroute('/home'); });
+$f3->route('GET|HEAD /', function($f3) { $f3->reroute('/home'); });
 // search page
-$f3->route('GET @search: /@version/search', '\Page\Controller->search');
+$f3->route('GET|HEAD @search: /@version/search', '\Page\Controller->search');
 // view page
-$f3->route('GET @legacy_view: /@page', '\Page\Controller->view');
-$f3->route('GET @view: /@version/@page', '\Page\Controller->view');
+$f3->route('GET|HEAD @legacy_view: /@page', '\Page\Controller->view');
+$f3->route('GET|HEAD @view: /@version/@page', '\Page\Controller->view');
 // get edit form
 $f3->route(
 	array(
-		'GET @create: /@version/create',
-		'GET /@version/edit/@page',
-		'GET /@version/edit/@page/@marker'
+		'GET|HEAD @create: /@version/create',
+		'GET|HEAD /@version/edit/@page',
+		'GET|HEAD /@version/edit/@page/@marker'
 	),
 	'\Page\Controller->edit'
 );
