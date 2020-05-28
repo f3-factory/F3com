@@ -42,7 +42,12 @@ $f3->set('DOCVERSIONS', array('3.7', '3.6', '3.5'));
 
 // app vars
 $f3->set('REPO', 'https://github.com/F3Community/F3com-data');
-$f3->set('DOMAIN', 'fatfreeframework.com');
+if(isset($is_php_webserver) && $is_php_webserver === true) {
+	$f3->set('DOMAIN', 'localhost:'.$_SERVER['SERVER_PORT']);
+	$f3->set('BASE', '');
+} else {
+	$f3->set('DOMAIN', 'fatfreeframework.com');
+}
 
 // default page
 $f3->route('GET|HEAD /', function($f3) { $f3->reroute('/home'); });
