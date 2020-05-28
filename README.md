@@ -18,3 +18,8 @@ Use the following command to get the content from an existing "code" repository
 ```
 git submodule update --init
 ```
+
+Additionally if you wish to run this in the local php development server, do the following:
+```
+php -S localhost:8000 .htrouter.php
+```
