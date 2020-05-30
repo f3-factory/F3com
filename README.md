@@ -20,6 +20,7 @@ git submodule update --init
 ```
 
 Additionally if you wish to run this in the local php development server, do the following:
+
 ```
-php -S localhost:8000 .htrouter.php
+php -S localhost:8000 .router.php
 ```
