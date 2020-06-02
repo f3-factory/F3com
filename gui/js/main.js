@@ -9,7 +9,7 @@ $(document).ready(function() {
 			context: '#main',
 			extendPage: false,
 			smoothScroll: true,
-			scrollTo: 60,
+			scrollTo: 75,
 			showEffect: 'fadeIn',
 			hideEffect: 'fadeOut'
 		}).data("tocify");
