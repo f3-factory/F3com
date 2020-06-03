@@ -78,6 +78,10 @@ td.center {
 	/*text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);*/
 }
 
+.navbar .nav > .active {
+	background-color: #EEE;
+}
+
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -484,6 +488,10 @@ ul.tree li .label {
 	overflow: auto;
 }
 
+#toc a {
+	color: #428bca;
+}
+
 #toc .active {
 	background: #428bca;
 }
@@ -866,4 +874,60 @@ pre code {
 	right: 0px;
 	}
 
+}
+
+/*
+ * Fixes for elements lost in bootstrap 3 when upgrading to bootstrap 4
+ */
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+}
+.pager li {
+  display: inline;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #777777;
+  cursor: not-allowed;
+  background-color: #fff;
+}
+.pager:before,
+.pager:after {
+  display: table;
+  content: " ";
+}
+.pager:after {
+  clear: both;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
 }
