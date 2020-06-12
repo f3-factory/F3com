@@ -29,11 +29,11 @@
 
 <body>
 	<div class="navbar navbar-expand-md sticky-top border-bottom">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
 				<a href="{{@BASE}}/" class="navbar-brand"><img src="{{@BASE}}/{{@UI}}img/logo.png" alt=""></a>
-				<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-content">
-					<span class="fas fa-bar"></span>
+				<button type="button" class="navbar-toggler collapsed pull-right" data-toggle="collapse" data-target=".navbar-content">
+					<span class="fas fa-bars"></span>
 				</button>
 			</div>
 			<div class="collapse navbar-collapse navbar-right navbar-content">
@@ -45,7 +45,7 @@
 	<include if="{{isset(@include)}}" href="{{@include}}"></include>
 	<footer>
 		<div class="cont">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<p class="socialButtons">
