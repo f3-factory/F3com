@@ -17,7 +17,8 @@
 	<meta name="robots" content="index,follow">
 	<link href="{{@BASE}}/{{@UI}}css/jquery.tocify.css" rel="stylesheet">
 	<link href="{{@BASE}}/{{@UI}}css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{@BASE}}/{{@UI}}css/font-awesome.min.css" rel="stylesheet">
+	<link href="{{@BASE}}/{{@UI}}css/font-awesome-all.min.css" rel="stylesheet">
+	<link href="{{@BASE}}/{{@UI}}css/font-awesome-v4-shims.min.css" rel="stylesheet">
 	<link href="{{@BASE}}/{{@UI}}css/main.css" rel="stylesheet">
 	<link href="{{@BASE}}/{{@UI}}css/code.css" rel="stylesheet">
 
@@ -27,15 +28,13 @@
 </head>
 
 <body>
-	<div class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar navbar-expand-md sticky-top border-bottom">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-content">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
 				<a href="{{@BASE}}/" class="navbar-brand"><img src="{{@BASE}}/{{@UI}}img/logo.png" alt=""></a>
+				<button type="button" class="navbar-toggler collapsed pull-right" data-toggle="collapse" data-target=".navbar-content">
+					<span class="fas fa-bars"></span>
+				</button>
 			</div>
 			<div class="collapse navbar-collapse navbar-right navbar-content">
 				<navigation menu="main" tmpl="navigation_main.html"></navigation>
@@ -70,9 +69,10 @@
 		</div>
 	</footer>
 
-	<script src="{{@BASE}}/{{@UI}}js/jquery-1.11.1.min.js"></script>
+	<script src="{{@BASE}}/{{@UI}}js/jquery-3.5.1.min.js"></script>
 	<script src="{{@BASE}}/{{@UI}}js/jquery-ui.min.js"></script>
-	<script src="{{@BASE}}/{{@UI}}js/bootstrap.min.js"></script>
+	<script src="{{@BASE}}/{{@UI}}js/jquery-migrate-3.3.0.min.js"></script>
+	<script src="{{@BASE}}/{{@UI}}js/bootstrap.bundle.min.js"></script>
 	<script src="{{@BASE}}/{{@UI}}js/jquery.tocify.min.js"></script>
 	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 		<script src="{{@BASE}}/{{@UI}}js/main.js"></script>
