@@ -1,0 +1,37 @@
+{
+    "514ba5277fab7": {
+        "name": "Full Page",
+        "file": "fullpage.html",
+        "marker": [
+            "main"
+        ]
+    },
+    "514ba5278011d": {
+        "name": "Home",
+        "file": "home.html",
+        "marker": [
+            "header",
+            "teaser_1_1",
+            "teaser_1_2",
+            "teaser_2_1",
+            "teaser_2_2",
+            "download",
+            "main"
+        ]
+    },
+    "514ba52780690": {
+        "name": "Table of Content Sidemenu",
+        "file": "toc-sidemenu.html",
+        "marker": [
+            "main"
+        ]
+    },
+    "514ba52780bae": {
+        "name": "Left-Main",
+        "file": "left-main.html",
+        "marker": [
+            "main",
+            "left"
+        ]
+    }
+}

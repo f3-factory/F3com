@@ -33,7 +33,7 @@ $f3->set('TMPL', 'tmpl/');
 
 
 // set existing doc versions
-$f3->set('DOCVERSIONS', array('3.7', '3.6', '3.5'));
+$f3->set('DOCVERSIONS', ['3.8','3.7', '3.6', '3.5']);
 
 // extend Template Engine
 \Template::instance()->extend('navigation', '\Navigation\View::renderTag');
