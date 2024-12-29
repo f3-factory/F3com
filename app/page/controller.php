@@ -24,7 +24,6 @@ class Controller
 			'template' => ''
 		);
 		$this->include = '';
-		$this->displayEdit = false;
 	}
 
 	/*

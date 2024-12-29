@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "611772882f2e1765250718cb83cdf086",
+    "content-hash": "32dcbd863648625c0024d6f8bbeb4488",
     "packages": [
         {
             "name": "bcosca/fatfree-core",
-            "version": "3.7.3",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bcosca/fatfree-core.git",
-                "reference": "3e23ae05384b2f830e99c5888b94118819ed948b"
+                "url": "https://github.com/f3-factory/fatfree-core.git",
+                "reference": "2c35ca4923d280e834222fcca473d3fe23e362d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree-core/zipball/3e23ae05384b2f830e99c5888b94118819ed948b",
-                "reference": "3e23ae05384b2f830e99c5888b94118819ed948b",
+                "url": "https://api.github.com/repos/f3-factory/fatfree-core/zipball/2c35ca4923d280e834222fcca473d3fe23e362d2",
+                "reference": "2c35ca4923d280e834222fcca473d3fe23e362d2",
                 "shasum": ""
             },
             "require": {
@@ -36,19 +36,19 @@
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
             "support": {
-                "issues": "https://github.com/bcosca/fatfree-core/issues",
-                "source": "https://github.com/bcosca/fatfree-core/tree/3.7.3"
+                "issues": "https://github.com/f3-factory/fatfree-core/issues",
+                "source": "https://github.com/f3-factory/fatfree-core/tree/3.9.0"
             },
-            "time": "2020-12-13T12:49:39+00:00"
+            "time": "2024-12-29T14:41:56+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
