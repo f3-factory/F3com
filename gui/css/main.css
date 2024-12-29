@@ -310,6 +310,7 @@ footer .cont {
 	width: 100%;
 	color: #BBB;
 	padding-top: 20px;
+	min-height: 80px;
 }
 
 footer .cont h3 {
